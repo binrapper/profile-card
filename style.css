@@ -55,6 +55,17 @@ body:hover{
     text-align: center;
     overflow: hidden;
     margin: 0 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+    position: relative;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    background-color: var(--primary-color);
 }
 .card h2{
     margin-top: 35px;
@@ -79,16 +90,27 @@ img{
 .card p{
     color: var(--primary-color);
 }
-.card_social{
-    margin: 25px 0;
-}
 .card_social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    margin: 25px 20px;
-    font-size: 20px;
+    /* margin: 25px 20px; */
+    font-size: 18px;
+    height: 34px;
+    width: 34px;
+    background-color: #4070f4;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 25px 10px;
 }
 .card_social a:hover{
     color: var(--primary-color);
+}
+.card .card_social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .card button{
     width: 150px;
@@ -108,4 +130,5 @@ img{
     border-radius: unset;
     transform: unset;
     border: unset;
+    content: none;
 }
